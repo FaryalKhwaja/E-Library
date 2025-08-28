@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>E-Library</h1>
+    <h1>Library</h1>
 
     <form id="bookForm">
-        <input class="title" type="text" id="titleInput" placeholder="Book Title" required>
-        <input class="author" type="text" id="authorInput" placeholder="Author" required>
-        <input class="readStatus" type="text" id="statusInput" placeholder="Read? Yes/No" required>
-        <button type="button" class="AddBookBtn">Add Book</button>
+        <label for="Input">Fill In: </label>
+        <input class="title" type="text" id="Input" placeholder="Book Title" required>
+        <input class="author" type="text" id="Input" placeholder="Author" required>
+        <input class="readStatus" type="text" id="Input" placeholder="Read? Yes/No" required>
+        <button type="button" class="AddBookBtn" id="formBtn">Add Book</button>
     </form>
     <div class="shelfDiv"></div>
-    <button id="OpenFormBtn">Add Book!</button>
+    <button class="OpenFormBtn" id="openForm">Open Form!</button>
 
 
     <script src="script.js"></script>

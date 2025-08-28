@@ -1,0 +1,73 @@
+body {
+    background-color: beige;
+}
+
+h1 {
+    text-align: center;
+}
+
+#bookForm {
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    gap: 7px;
+    position: fixed;
+    top: 10px;
+    background: #f7e3c4;
+    padding: 30px;
+    border-radius: 10px;
+    border: #e0cba1;
+}
+
+#Input {
+    border-radius: 10px;
+    background-color: #fff9f0;
+    border: 1px solid #e0d9c7;
+    padding: 10px;
+}
+
+#formBtn {
+    display: block;
+    width: fit-content;
+    margin-left: 35px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #c3a86b;
+    background-color: #d4b483;
+    padding: 9px;
+}
+
+#openForm {
+    border-radius: 5px;
+    border: 1px solid #c3a86b;
+    background-color: #d4b483;
+    padding: 9px;
+    margin-top: 30px;
+    margin-left: 600px;
+}
+
+.shelfDiv {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.bookDiv {
+    background-color: #fff5e0;
+    border: 1px solid #c3a86b;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    padding-top: 120px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    white-space: pre-line;
+    box-sizing: border-box;
+    transition: width 0.3s;
+    height: 60vh;
+    margin-top: 50px;
+}
+
+.bookDiv:hover {
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+}
