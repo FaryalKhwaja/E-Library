@@ -71,3 +71,12 @@ h1 {
 .bookDiv:hover {
     box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
 }
+
+.delBtn {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #c3a86b;
+    background-color: #d4b483;
+    padding: 9px;
+    margin: 10px auto 0 auto;
+}

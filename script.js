@@ -14,13 +14,9 @@ function Book (title, author, readStatus) {
     this.readStatus = readStatus;
 }
 
-function addBookToLibrary(title, author, readStatus) {
-    const book = new Book(title, author, readStatus);
-    library.push(book);
-
+function renderBooks() {
     shelfDiv.innerHTML = "";
-
-    library.forEach((b) => {
+    library.forEach((b, index) => {
         const bookDiv = document.createElement("div");
         bookDiv.classList.add("bookDiv");
         bookDiv.textContent = `${b.title}\n\n${b.author}\n\nRead: ${b.readStatus}`;
@@ -28,10 +24,24 @@ function addBookToLibrary(title, author, readStatus) {
         bookDiv.style.width = `${100 / library.length}%`;
         bookDiv.style.boxSizing = "border-box";
 
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.classList.add("delBtn");
+        delBtn.style.marginTop = "10px";
+        delBtn.addEventListener("click", () => {
+            library.splice(index, 1);
+            renderBooks();
+        });
+
+        bookDiv.appendChild(delBtn);
         shelfDiv.appendChild(bookDiv);
     });
+}
 
-    console.log(library);
+function addBookToLibrary(title, author, readStatus) {
+    const book = new Book(title, author, readStatus);
+    library.push(book);
+    renderBooks();
     form.style.display = "none";
 }
 
@@ -39,7 +49,6 @@ addBook.addEventListener("click", () => {
     addBookToLibrary(title.value, author.value, readStatus.value);
 });
 console.log(addBook);
-
 
 openForm.addEventListener("click", () => {
     form.style.display = "flex";
