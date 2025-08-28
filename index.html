@@ -9,12 +9,14 @@
 <body>
     <h1>E-Library</h1>
 
-    <div class="shelfDiv">
-
-    </div>
-
-    <button id="addBookBtn">Add Book!</button>
-
+    <form id="bookForm">
+        <input class="title" type="text" id="titleInput" placeholder="Book Title" required>
+        <input class="author" type="text" id="authorInput" placeholder="Author" required>
+        <input class="readStatus" type="text" id="statusInput" placeholder="Read? Yes/No" required>
+        <button type="button" class="AddBookBtn">Add Book</button>
+    </form>
+    <div class="shelfDiv"></div>
+    <button id="OpenFormBtn">Add Book!</button>
 
 
     <script src="script.js"></script>

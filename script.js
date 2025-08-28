@@ -1,7 +1,10 @@
 let library = [];
 
 let shelfDiv = document.querySelector(".shelfDiv");
-let addBook = document.getElementById("addBookBtn")
+let addBook = document.querySelector(".AddBookBtn");
+let title = document.querySelector(".title");
+let author = document.querySelector(".author");
+let readStatus = document.querySelector(".readStatus");
 
 function Book (title, author, readStatus) {
     this.title = title;
@@ -13,6 +16,9 @@ function addBookToLibrary (title, author, readStatus) {
     const book = new Book(title, author, readStatus);
     library.push(book);
     let bookDiv = document.createElement("div");
+    let bookTitle = title;
+    let bookAuthor = author;
+    let bookReadStatus = readStatus;
     bookDiv.textContent = title + "\n" + author + "\nRead: " + readStatus;
     bookDiv.style.whiteSpace = "pre-line";
     shelfDiv.appendChild(bookDiv);
@@ -20,6 +26,6 @@ function addBookToLibrary (title, author, readStatus) {
 }
 
 addBook.addEventListener("click", () => {
-    addBookToLibrary("Atomic Habits", "James Clear", "Yes");
+    addBookToLibrary(title.value, author.value, readStatus.value);
 });
 console.log(addBook);
